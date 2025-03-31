@@ -1,0 +1,11 @@
+<?xml version="1.0" encoding="UTF-8" ?>
+<!-- mapper 주의! -->
+<!DOCTYPE mapper
+        PUBLIC "-//mybatis.org//DTD Mapper 3.0//EN"
+        "http://mybatis.org/dtd/mybatis-3-mapper.dtd">
+<mapper namespace="org.example.t250331.mapper.AnimeMapper">
+    <insert id="insertAnime" parameterType="org.example.t250331.model.domain.Anime">
+        INSERT INTO animes (anime_id, title, description)
+        VALUES (#{uuid}, #{title}, #{description})
+    </insert>
+</mapper>

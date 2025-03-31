@@ -11,6 +11,14 @@
     <title>Title</title>
 </head>
 <body>
+    <pre>Result : <%= request.getAttribute("result") %></pre>
 
+    <section>
+        <form action="anime" method="post">
+            <label>이름 : <input name="title"></label>
+            <label>설명 : <input name="description"></label>
+            <button>등록</button>
+        </form>
+    </section>
 </body>
 </html>
