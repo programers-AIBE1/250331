@@ -19,8 +19,6 @@ public class IndexController {
     @GetMapping("/")
     public String index(Model model) {
         try (SqlSession session = MyBatisConfig.getSqlSessionFactory().openSession()) {
-//            TestMapper testMapper = session.getMapper(TestMapper.class);
-//            int result = testMapper.selectOnePlusOne();
             AnimeMapper animeMapper = session.getMapper(AnimeMapper.class);
             List<Anime> result = animeMapper.getAllAnimes();
             model.addAttribute("result", result);
